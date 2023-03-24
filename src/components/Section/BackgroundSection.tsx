@@ -34,7 +34,6 @@ export const BackgroundSection = ({
         if (entry.intersectionRatio < 0.9 && entry.isIntersecting) {
           setOpacity(0);
         } else if (entry.intersectionRatio > 0.5 && entry.isIntersecting) {
-          console.log("opacity: 1", entry.target.className);
           setOpacity(1);
         }
         // Set active section
