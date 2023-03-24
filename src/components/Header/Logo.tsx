@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 /* Components */
-import logo from "../../../src/assets/media/tesla_logo.svg";
+import logo from "../../assets/tesla_logo.svg";
 
 export const Logo: React.FunctionComponent = () => {
   return (
