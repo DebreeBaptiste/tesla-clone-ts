@@ -1,0 +1,57 @@
+.button {
+  /* SELF-LAYOUT */
+  display: flex;
+  /* APPEARANCE */
+  border-radius: var(--size-half);
+  background-color: var(--color-white);
+  backdrop-filter: var(--button-backdrop-filter);
+  /* MISCELLANEAOUS */
+  cursor: pointer;
+  /* INNER-LAYOUT */
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-base) var(--size-3x);
+  line-height: 1.3;
+  /* TEXT */
+  letter-spacing: 0.03rem;
+  font-family: var(--font-family--base);
+  font-size: var(--font-size-35);
+
+  &-light {
+    /* SELF-LAYOUT */
+
+    /* APPEARANCE */
+    color: var(--color-black);
+    background-color: var(--button--background-light);
+    /* MISCELLANEAOUS */
+
+    /* INNER-LAYOUT */
+
+    /* TEXT */
+  }
+  &-dark {
+    /* SELF-LAYOUT */
+
+    /* APPEARANCE */
+    color: var(--color-white);
+    background-color: var(--button--background-dark);
+    /* MISCELLANEAOUS */
+
+    /* INNER-LAYOUT */
+
+    /* TEXT */
+  }
+}
+@media (max-width: 600px) {
+  .button {
+    /* SELF-LAYOUT */
+    width: 100%;
+    /* APPEARANCE */
+
+    /* MISCELLANEAOUS */
+
+    /* INNER-LAYOUT */
+
+    /* TEXT */
+  }
+}

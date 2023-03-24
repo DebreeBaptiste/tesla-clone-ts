@@ -1,0 +1,44 @@
+.not-found {
+  /* SELF-LAYOUT */
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--size-2x);
+  width: 100%;
+  height: 100vh;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+  justify-content: center;
+  align-items: center;
+  /* TEXT */
+}
+
+.text-404 {
+  /* SELF-LAYOUT */
+
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-family: var(--font-family--base);
+  font-size: var(--size-12x);
+}
+
+.text-not-found {
+  /* SELF-LAYOUT */
+
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-family: var(--font-family--base);
+  font-size: var(--size-8x);
+}
