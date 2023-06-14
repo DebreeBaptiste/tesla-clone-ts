@@ -1,5 +1,6 @@
 /* tools */
-import { useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
+import { ColorContext } from "../Hooks/ColorContext";
 
 /* components */
 import { BackgroundSection } from "../components/Section/BackgroundSection";
@@ -10,9 +11,19 @@ import { SectionModel } from "../components/Section/SectionModel";
 import { HomeProps } from "../@types/data.js";
 
 export const Home = ({ data }: HomeProps) => {
-  const [activeSection, setActiveSection] = useState<string>("modely");
+  const [activeSection, setActiveSection] = useState<string>("discover-tesla");
   const [sectionData, setActiveSectionData] = useState<any>({});
   const [opacity, setOpacity] = useState<number>(1);
+
+  const { changeColor } = useContext(ColorContext);
+
+  useEffect(() => {
+    if (activeSection === "discover-tesla") {
+      changeColor("white");
+    } else {
+      changeColor("black");
+    }
+  }, [activeSection]);
 
   useMemo(() => {
     data.items.find((item: { className: string }) => {
@@ -48,6 +59,7 @@ export const Home = ({ data }: HomeProps) => {
           name={sectionData.name}
           buttonDarkText={sectionData.buttonDarkText}
           buttonLightText={sectionData.buttonLightText}
+          buttonTransparent={sectionData.buttonTransparent}
           opacity={opacity}
         />
       </Section>

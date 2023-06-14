@@ -54,11 +54,22 @@ export const BackgroundSection = ({
   });
 
   return (
-    <div ref={BackgroundSectionRef} className={className}>
-      <div
-        className="image"
-        style={{ backgroundImage: `url(${backgroundImg})` }}
-      ></div>
+    <div ref={BackgroundSectionRef} className={`${className}`}>
+      {backgroundImg.slice(-3) === "mp4" ? (
+        <video
+          className="video"
+          autoPlay
+          muted
+          loop
+          src={backgroundImg}
+        ></video>
+      ) : (
+        <img
+          className="image"
+          src={backgroundImg}
+          alt="picture of a tesla car"
+        />
+      )}
     </div>
   );
 };

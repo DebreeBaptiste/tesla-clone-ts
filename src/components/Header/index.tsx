@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ColorContext } from "../../Hooks/ColorContext";
+
 /* Components */
 import { Logo } from "./Logo";
 import { NavBar } from "./NavBar";
@@ -11,15 +14,19 @@ interface HeaderProps {
 }
 
 export const Header = ({ data }: HeaderProps) => {
+  const { color } = useContext(ColorContext);
+
   return (
     <header className="header">
       <Logo />
       <NavBar className="main-nav">
         {data.items.map((item: any) => {
           return (
-            <NavItem path={item.slug} key={item.id}>
-              {item.name}
-            </NavItem>
+            item.name && (
+              <NavItem path={item.slug} key={item.id}>
+                {item.name}
+              </NavItem>
+            )
           );
         })}
       </NavBar>
@@ -30,7 +37,13 @@ export const Header = ({ data }: HeaderProps) => {
         <NavItem path={data.account.slug}>{data.account.name}</NavItem>
       </NavBar>
       <NavBar className="menu-button">
-        <button className="button-menu-right">Menu</button>
+        <button
+          className={`button-menu-right ${
+            color === "white" ? "button-menu-right-white" : ""
+          }`}
+        >
+          Menu
+        </button>
       </NavBar>
     </header>
   );

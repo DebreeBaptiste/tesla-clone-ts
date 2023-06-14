@@ -7,9 +7,27 @@
   /* MISCELLANEAOUS */
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   /* INNER-LAYOUT */
 
+  /* TEXT */
+}
+
+.model3,
+.modely,
+.modelx,
+.models,
+.discover-tesla,
+.powerwall,
+.recharge {
+  /* SELF-LAYOUT */
+  height: 100vh;
+  /* APPEARANCE */
+  /* MISCELLANEAOUS */
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  /* INNER-LAYOUT */
   /* TEXT */
 }
 
@@ -29,6 +47,17 @@
   /* INNER-LAYOUT */
   justify-items: center;
   align-items: center;
+
+  /* TEXT */
+}
+.section-title-container-white {
+  /* SELF-LAYOUT */
+
+  /* APPEARANCE */
+  color: var(--color-white);
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
 
   /* TEXT */
 }
@@ -79,9 +108,9 @@
 
 .section-link {
   /* SELF-LAYOUT */
-
+  min-width: max-content;
   /* APPEARANCE */
-  color: var(--color-black);
+  color: inherit;
   text-decoration: none;
   /* MISCELLANEAOUS */
   cursor: pointer;
@@ -119,6 +148,17 @@
 
     /* TEXT */
   }
+}
+.section-title-container-white .section-link::after {
+  /* SELF-LAYOUT */
+  display: none;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
 }
 @media (max-width: 600px) {
   .section-link {
@@ -172,7 +212,15 @@
 .image {
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+.video {
+  position: relative;
+  z-index: -1;
+  min-width: 100%;
+  height: 100vh;
+  object-fit: cover;
   scroll-snap-align: center;
 }

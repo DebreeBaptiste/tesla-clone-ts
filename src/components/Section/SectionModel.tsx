@@ -1,5 +1,7 @@
 /* Tool */
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ColorContext } from "../../Hooks/ColorContext";
 
 /* Style */
 import "./styles.scss";
@@ -19,8 +21,15 @@ export const SectionModel = ({
   bookTestDriveSlug,
   opacity,
 }: ModelProps) => {
+  const { color } = useContext(ColorContext);
+
   return (
-    <div className="section-title-container" style={{ opacity: `${opacity}` }}>
+    <div
+      className={`section-title-container ${
+        color === "white" ? "section-title-container-white" : ""
+      }`}
+      style={{ opacity: `${opacity}` }}
+    >
       <h2 className={`section-title ${slug}`}>{name}</h2>
 
       {bookTestDrive && (

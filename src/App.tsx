@@ -1,5 +1,6 @@
 /* tools */
 import { Route, Routes } from "react-router-dom";
+import { ColorProvider } from "./Hooks/ColorContext";
 
 /* components */
 import { Header } from "./components/Header";
@@ -15,11 +16,13 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Header data={data} />
-      <Routes>
-        <Route path="/" element={<Home data={data} />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ColorProvider>
+        <Header data={data} />
+        <Routes>
+          <Route path="/" element={<Home data={data} />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ColorProvider>
     </div>
   );
 }
