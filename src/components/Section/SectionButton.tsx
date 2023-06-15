@@ -7,6 +7,7 @@ interface SectionButtonProps {
   buttonLightText?: string;
   buttonTransparent?: string;
   opacity: number;
+  timeline?: boolean;
 }
 
 export const SectionButton = ({
@@ -15,6 +16,7 @@ export const SectionButton = ({
   buttonLightText,
   buttonTransparent,
   opacity,
+  timeline,
 }: SectionButtonProps) => {
   return (
     <div className="section-button-container" style={{ opacity: `${opacity}` }}>
@@ -25,7 +27,9 @@ export const SectionButton = ({
         <Button className={`button-light ${name}`}>{buttonLightText}</Button>
       )}
       {buttonTransparent && (
-        <Button className={`button-transparent`}>{buttonTransparent}</Button>
+        <Button className={`button-transparent visible-${timeline}`}>
+          {buttonTransparent}
+        </Button>
       )}
     </div>
   );

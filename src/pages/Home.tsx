@@ -14,6 +14,7 @@ export const Home = ({ data }: HomeProps) => {
   const [activeSection, setActiveSection] = useState<string>("discover-tesla");
   const [sectionData, setActiveSectionData] = useState<any>({});
   const [opacity, setOpacity] = useState<number>(1);
+  const [timeline, setTimeline] = useState<any>(false);
 
   const { changeColor } = useContext(ColorContext);
 
@@ -24,6 +25,12 @@ export const Home = ({ data }: HomeProps) => {
       changeColor("black");
     }
   }, [activeSection]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeline(true);
+    }, 2000);
+  }, []);
 
   useMemo(() => {
     data.items.find((item: { className: string }) => {
@@ -59,6 +66,7 @@ export const Home = ({ data }: HomeProps) => {
           bookTestDrive={sectionData.bookTestDrive}
           bookTestDriveSlug={sectionData.bookTestDriveSlug}
           opacity={opacity}
+          timeline={timeline}
         />
         <SectionButton
           name={sectionData.name}
@@ -66,6 +74,7 @@ export const Home = ({ data }: HomeProps) => {
           buttonLightText={sectionData.buttonLightText}
           buttonTransparent={sectionData.buttonTransparent}
           opacity={opacity}
+          timeline={timeline}
         />
       </Section>
     </div>

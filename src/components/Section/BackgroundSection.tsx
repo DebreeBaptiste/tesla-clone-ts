@@ -97,7 +97,7 @@ export const BackgroundSection = ({
             autoPlay
             loop
             playsInline
-            controls={true}
+            controls={false}
             width="100%"
             height="100%"
           >

@@ -12,6 +12,7 @@ interface ModelProps {
   bookTestDrive?: string;
   bookTestDriveSlug: string;
   opacity: number;
+  timeline: boolean;
 }
 
 export const SectionModel = ({
@@ -20,6 +21,7 @@ export const SectionModel = ({
   bookTestDrive,
   bookTestDriveSlug,
   opacity,
+  timeline,
 }: ModelProps) => {
   const { color } = useContext(ColorContext);
 
@@ -30,10 +32,13 @@ export const SectionModel = ({
       }`}
       style={{ opacity: `${opacity}` }}
     >
-      <h2 className={`section-title ${slug}`}>{name}</h2>
+      <h2 className={`section-title ${slug} visible-${timeline}`}>{name}</h2>
 
       {bookTestDrive && (
-        <Link to={bookTestDriveSlug} className="section-link">
+        <Link
+          to={bookTestDriveSlug}
+          className={`section-link visible-${timeline}`}
+        >
           {bookTestDrive}
         </Link>
       )}
