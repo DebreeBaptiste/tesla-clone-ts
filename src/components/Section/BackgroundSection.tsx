@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./styles.scss";
 
@@ -6,14 +6,15 @@ interface BackgroundSectionProps {
   data: {
     id: number;
     className: string;
-    backgroundImg: string;
+    backgroundDesktop: string;
+    backgroundMobile: string;
   };
   setActiveSection: (section: string) => void;
   setOpacity: (opacity: number) => void;
 }
 
 export const BackgroundSection = ({
-  data: { className, backgroundImg },
+  data: { className, backgroundDesktop, backgroundMobile },
   setActiveSection,
   setOpacity,
 }: BackgroundSectionProps) => {
@@ -53,20 +54,39 @@ export const BackgroundSection = ({
     obserser.observe(BackgroundSectionRef.current!);
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+  // Check if device is mobile on resize window
+  useEffect(() => {
+    // Update isMobile state on window resize
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768); // Assuming mobile screen width is 768px or less
+    }
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div ref={BackgroundSectionRef} className={`${className}`}>
-      {backgroundImg.slice(-3) === "mp4" ? (
+      {backgroundDesktop.slice(-3) === "mp4" ||
+      backgroundMobile.slice(-3) === "mp4" ? (
         <video
           className="video"
           autoPlay
           muted
           loop
-          src={backgroundImg}
+          playsInline
+          src={isMobile ? backgroundMobile : backgroundDesktop}
         ></video>
       ) : (
         <img
           className="image"
-          src={backgroundImg}
+          src={isMobile ? backgroundMobile : backgroundDesktop}
           alt="picture of a tesla car"
         />
       )}
