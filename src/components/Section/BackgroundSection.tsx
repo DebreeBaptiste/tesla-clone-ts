@@ -32,7 +32,7 @@ export const BackgroundSection = ({
     // Change active section when scrolling
     const handleChangeSection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio < 0.9 && entry.isIntersecting) {
+        if (entry.intersectionRatio < 0.8 && entry.isIntersecting) {
           setOpacity(0);
         } else if (entry.intersectionRatio > 0.5 && entry.isIntersecting) {
           setOpacity(1);
@@ -76,14 +76,7 @@ export const BackgroundSection = ({
       {backgroundDesktop.slice(-3) === "mp4" ||
       backgroundMobile.slice(-3) === "mp4" ? (
         <div className="video-overlay">
-          <video
-            className="video"
-            muted
-            autoPlay
-            loop
-            playsInline
-            controls={false}
-          >
+          <video className="video" muted autoPlay loop playsInline controls>
             <source
               src={isMobile ? backgroundMobile : backgroundDesktop}
               type="video/mp4"
