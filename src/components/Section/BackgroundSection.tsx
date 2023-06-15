@@ -18,6 +18,28 @@ export const BackgroundSection = ({
   setActiveSection,
   setOpacity,
 }: BackgroundSectionProps) => {
+  // check if device is mobile
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on resize window
+  useEffect(() => {
+    // Set isMobile state on component mount
+    if (window.innerWidth <= 600) setIsMobile(true);
+    // Update isMobile state on window resize
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 600); // 600px is the breakpoint for mobile
+    }
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  /* OBSERVER LOGIC */
   const BackgroundSectionRef = useRef<HTMLDivElement>(null);
 
   // Observer for section change when scrolling
@@ -32,7 +54,17 @@ export const BackgroundSection = ({
     // Change active section when scrolling
     const handleChangeSection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio < 0.6 && entry.isIntersecting) {
+        if (
+          entry.intersectionRatio < 0.9 &&
+          entry.isIntersecting &&
+          !isMobile
+        ) {
+          setOpacity(0);
+        } else if (
+          entry.intersectionRatio < 0.6 &&
+          entry.isIntersecting &&
+          isMobile
+        ) {
           setOpacity(0);
         } else if (entry.intersectionRatio > 0.5 && entry.isIntersecting) {
           setOpacity(1);
@@ -53,25 +85,6 @@ export const BackgroundSection = ({
     // Observe BackgroundSectionRef
     obserser.observe(BackgroundSectionRef.current!);
   });
-
-  const [isMobile, setIsMobile] = useState(false);
-  // Check if device is mobile on resize window
-  useEffect(() => {
-    // Set isMobile state on component mount
-    if (window.innerWidth <= 600) setIsMobile(true);
-    // Update isMobile state on window resize
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 600); // 600px is the breakpoint for mobile
-    }
-
-    // Attach the event listener
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div ref={BackgroundSectionRef} className={`${className}`}>
