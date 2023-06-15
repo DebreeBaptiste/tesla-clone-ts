@@ -22,7 +22,8 @@
 .powerwall,
 .recharge {
   /* SELF-LAYOUT */
-  height: 100svh;
+  min-height: 100svh;
+  max-height: 100lvh;
   /* APPEARANCE */
   /* MISCELLANEAOUS */
   scroll-snap-align: center;
@@ -216,11 +217,16 @@
   scroll-snap-align: center;
 }
 
-.video {
+.video-overlay {
   position: relative;
   z-index: -1;
   min-width: 100%;
   height: 100vh;
-  object-fit: cover;
   scroll-snap-align: center;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

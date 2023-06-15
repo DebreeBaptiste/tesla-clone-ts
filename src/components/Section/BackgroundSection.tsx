@@ -59,7 +59,7 @@ export const BackgroundSection = ({
   useEffect(() => {
     // Update isMobile state on window resize
     function handleResize() {
-      setIsMobile(window.innerWidth <= 768); // Assuming mobile screen width is 768px or less
+      setIsMobile(window.innerWidth <= 600); // 600px is the breakpoint for mobile
     }
 
     // Attach the event listener
@@ -75,14 +75,21 @@ export const BackgroundSection = ({
     <div ref={BackgroundSectionRef} className={`${className}`}>
       {backgroundDesktop.slice(-3) === "mp4" ||
       backgroundMobile.slice(-3) === "mp4" ? (
-        <video
-          className="video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          src={isMobile ? backgroundMobile : backgroundDesktop}
-        ></video>
+        <div className="video-overlay">
+          <video
+            className="video"
+            muted
+            autoPlay
+            loop
+            playsInline
+            controls={false}
+          >
+            <source
+              src={isMobile ? backgroundMobile : backgroundDesktop}
+              type="video/mp4"
+            />
+          </video>
+        </div>
       ) : (
         <img
           className="image"
