@@ -32,7 +32,7 @@ export const BackgroundSection = ({
     // Change active section when scrolling
     const handleChangeSection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio < 0.9 && entry.isIntersecting) {
+        if (entry.intersectionRatio < 0.6 && entry.isIntersecting) {
           setOpacity(0);
         } else if (entry.intersectionRatio > 0.5 && entry.isIntersecting) {
           setOpacity(1);
