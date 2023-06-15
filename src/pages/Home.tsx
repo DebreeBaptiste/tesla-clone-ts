@@ -37,7 +37,12 @@ export const Home = ({ data }: HomeProps) => {
     <div className="home">
       <Section>
         {data.items.map(
-          (item: { id: number; className: string; backgroundImg: string }) => {
+          (item: {
+            id: number;
+            className: string;
+            backgroundDesktop: string;
+            backgroundMobile: string;
+          }) => {
             return (
               <BackgroundSection
                 data={item}
