@@ -213,7 +213,7 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  scroll-snap-align: center;
+  scroll-snap-align: end;
 }
 
 .video-overlay {
@@ -221,11 +221,9 @@
   z-index: -1;
   min-width: 100%;
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: end;
 }
 
 .video {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }

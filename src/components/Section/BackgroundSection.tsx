@@ -57,6 +57,8 @@ export const BackgroundSection = ({
   const [isMobile, setIsMobile] = useState(false);
   // Check if device is mobile on resize window
   useEffect(() => {
+    // Set isMobile state on component mount
+    if (window.innerWidth <= 600) setIsMobile(true);
     // Update isMobile state on window resize
     function handleResize() {
       setIsMobile(window.innerWidth <= 600); // 600px is the breakpoint for mobile
@@ -76,7 +78,16 @@ export const BackgroundSection = ({
       {backgroundDesktop.slice(-3) === "mp4" ||
       backgroundMobile.slice(-3) === "mp4" ? (
         <div className="video-overlay">
-          <video className="video" muted autoPlay loop playsInline controls>
+          <video
+            className="video"
+            muted
+            autoPlay
+            loop
+            playsInline
+            controls={true}
+            width="100%"
+            height="100%"
+          >
             <source
               src={isMobile ? backgroundMobile : backgroundDesktop}
               type="video/mp4"
