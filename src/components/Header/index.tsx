@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ColorContext } from "../../Hooks/ColorContext";
+import { ModalContext } from "../../Hooks/ModalContext";
 
 /* Components */
 import { Logo } from "./Logo";
@@ -15,6 +16,7 @@ interface HeaderProps {
 
 export const Header = ({ data }: HeaderProps) => {
   const { color } = useContext(ColorContext);
+  const { modalHandler } = useContext(ModalContext);
 
   return (
     <header className="header">
@@ -36,11 +38,13 @@ export const Header = ({ data }: HeaderProps) => {
         <NavItem path={data.shop.slug}>{data.shop.name}</NavItem>
         <NavItem path={data.account.slug}>{data.account.name}</NavItem>
       </NavBar>
+
       <NavBar className="menu-button">
         <button
           className={`button-menu-right ${
             color === "white" ? "button-menu-right-white" : ""
           }`}
+          onClick={() => modalHandler(false)}
         >
           Menu
         </button>

@@ -78,7 +78,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+dialog {
   margin: 0;
   padding: 0;
   border: 0;
@@ -127,4 +128,8 @@ button {
   text-decoration: none;
   background-color: transparent;
   padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
