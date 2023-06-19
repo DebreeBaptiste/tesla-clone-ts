@@ -37,11 +37,13 @@
   /* FONT-SIZE */
   --font-size-10: 10px;
   --font-size-20: 12px;
+  --font-size-25: 13px;
   --font-size-30: 14px;
   --font-size-35: 16px:
   --font-size-40: 17px;
   --font-size-50: 20px;
   --font-size-55: 23px;
+  --font-size-60: 26px;
   --font-size-70: 28px;
   --font-size-75: 34px;
   --font-size-80: 40px;
@@ -89,10 +91,12 @@
   --size-14x: 112px;
   --size-15x: 120px;
   --size-16x: 128px;
+  --size-20x: 160px;
   --size-32x: 256px;
   --size-39x: 312px;
 }
 
 body{
   overscroll-behavior-y: none;
+  font-family: var(--font-family--base);
 }

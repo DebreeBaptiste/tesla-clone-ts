@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ColorContext } from "../../Hooks/ColorContext";
 import { ModalContext } from "../../Hooks/ModalContext";
+import { useLocation } from "react-router-dom";
 
 /* Components */
 import { Logo } from "./Logo";
@@ -17,9 +18,10 @@ interface HeaderProps {
 export const Header = ({ data }: HeaderProps) => {
   const { color } = useContext(ColorContext);
   const { modalHandler } = useContext(ModalContext);
+  const { pathname } = useLocation();
 
   return (
-    <header className="header">
+    <header className={`header ${pathname !== "/" && "not-fixed"}`}>
       <Logo />
       <NavBar className="main-nav">
         {data.items.map((item: any) => {

@@ -18,6 +18,16 @@
   padding: 0 var(--size-4x);
   /* TEXT */
 }
+.header.not-fixed {
+  /* SELF-LAYOUT */
+  position: absolute;
+  /* APPEARANCE */
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+}
 @media (max-width: 1200px) {
   .header {
     /* SELF-LAYOUT */

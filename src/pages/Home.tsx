@@ -9,12 +9,13 @@ import { SectionButton } from "../components/Section/SectionButton";
 import { SectionModel } from "../components/Section/SectionModel";
 
 import { HomeProps } from "../@types/data.js";
+import { ItemProps } from "../@types/item.js";
 
 export const Home = ({ data }: HomeProps) => {
   const [activeSection, setActiveSection] = useState<string>("discover-tesla");
   const [sectionData, setActiveSectionData] = useState<any>({});
   const [opacity, setOpacity] = useState<number>(1);
-  const [timeline, setTimeline] = useState<any>(false);
+  const [timeline, setTimeline] = useState<boolean>(false);
 
   const { changeColor } = useContext(ColorContext);
 
@@ -29,7 +30,7 @@ export const Home = ({ data }: HomeProps) => {
   useEffect(() => {
     setTimeout(() => {
       setTimeline(true);
-    }, 2000);
+    }, 1500);
   }, []);
 
   useMemo(() => {
@@ -41,25 +42,18 @@ export const Home = ({ data }: HomeProps) => {
   }, [activeSection]);
 
   return (
-    <div className="home">
+    <main className="home">
       <Section>
-        {data.items.map(
-          (item: {
-            id: number;
-            className: string;
-            backgroundDesktop: string;
-            backgroundMobile: string;
-          }) => {
-            return (
-              <BackgroundSection
-                data={item}
-                key={item.id}
-                setActiveSection={setActiveSection}
-                setOpacity={(value) => setOpacity(value)}
-              />
-            );
-          }
-        )}
+        {data.items.map((item: ItemProps) => {
+          return (
+            <BackgroundSection
+              data={item}
+              key={item.id}
+              setActiveSection={setActiveSection}
+              setOpacity={(value) => setOpacity(value)}
+            />
+          );
+        })}
         <SectionModel
           name={sectionData.title}
           slug={sectionData.bookTestDriveSlug}
@@ -77,6 +71,6 @@ export const Home = ({ data }: HomeProps) => {
           timeline={timeline}
         />
       </Section>
-    </div>
+    </main>
   );
 };

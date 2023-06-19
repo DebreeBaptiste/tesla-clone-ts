@@ -6,29 +6,37 @@ import { ModalProvider } from "./Hooks/ModalContext";
 /* components */
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
+import { Model } from "./pages/Model";
 import { NotFound } from "./pages/NotFound";
+import { Modal } from "./components/Modal/Modal";
 
 /* data */
 import { data } from "./data/data";
 
 /*  style */
 import "./App.scss";
-import { Modal } from "./components/Modal/Modal";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <ModalProvider>
         <ColorProvider>
           <Header data={data} />
           <Routes>
             <Route path="/" element={<Home data={data} />} />
+            {data.items.map((item: any) => (
+              <Route
+                key={item.id}
+                path={item.slug}
+                element={<Model data={item} />}
+              />
+            ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Modal data={data} />
         </ColorProvider>
       </ModalProvider>
-    </div>
+    </>
   );
 }
 

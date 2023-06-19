@@ -1,20 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
+import { ItemProps } from "../../@types/item";
+
 import "./styles.scss";
 
 interface BackgroundSectionProps {
-  data: {
-    id: number;
-    className: string;
-    backgroundDesktop: string;
-    backgroundMobile: string;
-  };
+  data: ItemProps;
   setActiveSection: (section: string) => void;
   setOpacity: (opacity: number) => void;
 }
 
 export const BackgroundSection = ({
-  data: { className, backgroundDesktop, backgroundMobile },
+  data: { className, images },
   setActiveSection,
   setOpacity,
 }: BackgroundSectionProps) => {
@@ -88,8 +85,8 @@ export const BackgroundSection = ({
 
   return (
     <div ref={BackgroundSectionRef} className={`${className}`}>
-      {backgroundDesktop.slice(-3) === "mp4" ||
-      backgroundMobile.slice(-3) === "mp4" ? (
+      {images.homeBackgroundDesktop.slice(-3) === "mp4" ||
+      images.homeBackgroundMobile.slice(-3) === "mp4" ? (
         <div className="video-overlay">
           <video
             className="video"
@@ -102,7 +99,11 @@ export const BackgroundSection = ({
             height="100%"
           >
             <source
-              src={isMobile ? backgroundMobile : backgroundDesktop}
+              src={
+                isMobile
+                  ? images.homeBackgroundMobile
+                  : images.homeBackgroundDesktop
+              }
               type="video/mp4"
             />
           </video>
@@ -110,7 +111,11 @@ export const BackgroundSection = ({
       ) : (
         <img
           className="image"
-          src={isMobile ? backgroundMobile : backgroundDesktop}
+          src={
+            isMobile
+              ? images.homeBackgroundMobile
+              : images.homeBackgroundDesktop
+          }
           alt="picture of a tesla car"
         />
       )}

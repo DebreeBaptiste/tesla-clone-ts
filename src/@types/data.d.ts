@@ -11,6 +11,24 @@ export interface HomeProps {
             name: string;
             buttonDarkText: string;
             buttonLightText: string;
+            images: {
+                homeBackgroundDesktop: string;
+                homeBackgroundMobile: string;
+                detailBackgroundModel: {
+                    mainModel: string;
+                    model1: string;
+                    model2: string;
+                    model3: string;
+                    model4: string;
+                }
+            }
+            details: [
+                {
+                    id: number;
+                    name: string;
+                    value: string;
+                }
+            ]
         }
         ];
         assistance: {

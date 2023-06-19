@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { ColorContext } from "../../Hooks/ColorContext";
+import { Link } from "react-router-dom";
 
 interface NavItemProps {
   children: string;
-  path?: string;
+  path: string;
 }
 
 export const NavItem = ({ children, path }: NavItemProps) => {
@@ -11,14 +12,14 @@ export const NavItem = ({ children, path }: NavItemProps) => {
 
   return (
     <li className="nav-list-item">
-      <a
-        href={path}
+      <Link
+        to={path}
         className={`nav-list-link ${
           color === "white" ? "nav-list-link-white" : ""
         }`}
       >
         <span className="nav-list-text">{children}</span>
-      </a>
+      </Link>
     </li>
   );
 };

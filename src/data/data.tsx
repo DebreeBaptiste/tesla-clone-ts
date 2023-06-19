@@ -7,11 +7,19 @@ export const data = {
       bookTestDrive: "Réserver un essai aujourd'hui",
       bookTestDriveSlug: "discoverTesla",
       className: "discover-tesla",
-      backgroundDesktop: "/media/Homepage-Test_Drive.mp4",
-      backgroundMobile: "/media/Homepage-Test_Drive-Mobile.mp4",
       buttonDarkText: undefined,
       buttonLightText: undefined,
-      buttonTransparent: "Essais",
+      images: {
+        homeBackgroundDesktop: "/media/Homepage-Test_Drive.mp4",
+        homeBackgroundMobile: "/media/Homepage-Test_Drive-Mobile.mp4",
+        detailBackgroundModel: {
+          mainModel: "",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
     },
     {
       id: 2,
@@ -21,10 +29,36 @@ export const data = {
       bookTestDriveSlug: "testdrive",
       slug: "modely",
       className: "modely",
-      backgroundDesktop: "/media/modely-desktop.avif",
-      backgroundMobile: "/media/modely-mobile.avif",
       buttonDarkText: "Véhicules disponibles",
       buttonLightText: "Configuration personalisée",
+      images: {
+        homeBackgroundDesktop: "/media/modely-desktop.avif",
+        homeBackgroundMobile: "/media/modely-mobile.avif",
+        detailBackgroundModel: {
+          mainModel: "/media/tesla-model-y.avif",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
+      details: [
+        {
+          id: 1,
+          name: "litres de capacité de chargement",
+          value: "2100 +",
+        },
+        {
+          id: 2,
+          name: "Autonomie (WLTP)",
+          value: "533 km",
+        },
+        {
+          id: 3,
+          name: "Dual Motor",
+          value: "AWD",
+        },
+      ],
     },
     {
       id: 3,
@@ -34,10 +68,36 @@ export const data = {
       bookTestDriveSlug: "testdrive",
       slug: "model3",
       className: "model3",
-      backgroundDesktop: "/media/model3-desktop.avif",
-      backgroundMobile: "/media/model3-mobile.avif",
       buttonDarkText: "Véhicules disponibles",
       buttonLightText: "Configuration personalisée",
+      images: {
+        homeBackgroundDesktop: "/media/model3-desktop.avif",
+        homeBackgroundMobile: "/media/model3-mobile.avif",
+        detailBackgroundModel: {
+          mainModel: "/media/tesla-model-3.webp",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
+      details: [
+        {
+          id: 1,
+          name: "Autonomie (WLTP)",
+          value: "602 km",
+        },
+        {
+          id: 2,
+          name: "0 à 100 km/h",
+          value: "3,3 s",
+        },
+        {
+          id: 3,
+          name: "Dual Motor",
+          value: "AWD",
+        },
+      ],
     },
     {
       id: 4,
@@ -47,10 +107,41 @@ export const data = {
       bookTestDriveSlug: "testdrive",
       slug: "models",
       className: "models",
-      backgroundDesktop: "/media/models-desktop.avif",
-      backgroundMobile: "/media/models-mobile.avif",
       buttonDarkText: "Configuration personalisée",
       buttonLightText: "En savoir plus",
+      images: {
+        homeBackgroundDesktop: "/media/models-desktop.avif",
+        homeBackgroundMobile: "/media/models-mobile.avif",
+        detailBackgroundModel: {
+          mainModel: "/media/tesla-model-s.avif",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
+      details: [
+        {
+          id: 1,
+          name: "Autonomie (WLTP)",
+          value: "600 km",
+        },
+        {
+          id: 2,
+          name: "0 à 100 km/h",
+          value: "2,1 s",
+        },
+        {
+          id: 3,
+          name: "Vitesse maximale",
+          value: "320 km/h",
+        },
+        {
+          id: 4,
+          name: "Puissance du véhicule",
+          value: "1020 ch",
+        },
+      ],
     },
     {
       id: 5,
@@ -60,10 +151,41 @@ export const data = {
       bookTestDriveSlug: "",
       slug: "modelx",
       className: "modelx",
-      backgroundDesktop: "/media/modelx-desktop.avif",
-      backgroundMobile: "/media/modelx-mobile.avif",
       buttonDarkText: "Configuration personalisée",
       buttonLightText: "En savoir plus",
+      images: {
+        homeBackgroundDesktop: "/media/modelx-desktop.avif",
+        homeBackgroundMobile: "/media/modelx-mobile.avif",
+        detailBackgroundModel: {
+          mainModel: "/media/tesla-model-x.avif",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
+      details: [
+        {
+          id: 1,
+          name: "Autonomie (WLTP)",
+          value: "543 km",
+        },
+        {
+          id: 2,
+          name: "0 à 100 km/h",
+          value: "2,6 s",
+        },
+        {
+          id: 3,
+          name: "1/4 mile",
+          value: "9,9 s",
+        },
+        {
+          id: 4,
+          name: "Puisance du véhicule",
+          value: "1020 ch",
+        },
+      ],
     },
     {
       id: 6,
@@ -73,10 +195,36 @@ export const data = {
       bookTestDriveSlug: "",
       slug: "powerwall",
       className: "powerwall",
-      backgroundDesktop: "/media/powerwall.avif",
-      backgroundMobile: "/media/powerwall-mobile.avif",
       buttonDarkText: "En savoir plus",
       buttonLightText: undefined,
+      images: {
+        homeBackgroundDesktop: "/media/powerwall.avif",
+        homeBackgroundMobile: "/media/powerwall-mobile.avif",
+        detailBackgroundModel: {
+          mainModel: "/media/tesla-powerwall.avif",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
+      details: [
+        {
+          id: 1,
+          name: "Stockez l'énergie",
+          value: "logo",
+        },
+        {
+          id: 2,
+          name: "Protection de secours",
+          value: "logo",
+        },
+        {
+          id: 3,
+          name: "Alimentez votre foyer",
+          value: "logo",
+        },
+      ],
     },
     {
       id: 7,
@@ -86,10 +234,36 @@ export const data = {
       bookTestDriveSlug: "",
       slug: "recharge",
       className: "recharge",
-      backgroundDesktop: "/media/charger.avif",
-      backgroundMobile: "/media/charger.avif",
       buttonDarkText: "Commander maintenant",
       buttonLightText: undefined,
+      images: {
+        homeBackgroundDesktop: "/media/charger.avif",
+        homeBackgroundMobile: "/media/charger.avif",
+        detailBackgroundModel: {
+          mainModel: "/media/tesla-recharge.avif",
+          model1: "",
+          model2: "",
+          model3: "",
+          model4: "",
+        },
+      },
+      details: [
+        {
+          id: 1,
+          name: "Rechargez à domicile",
+          value: "logo",
+        },
+        {
+          id: 2,
+          name: "Superchargeurs mondiaux",
+          value: "45 000 +",
+        },
+        {
+          id: 3,
+          name: "Wall Connectors sur les sites Recharge à destination",
+          value: "40 000 +",
+        },
+      ],
     },
   ],
   assistance: {
