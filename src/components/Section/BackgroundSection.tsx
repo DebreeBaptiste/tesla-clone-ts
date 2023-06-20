@@ -48,7 +48,7 @@ export const BackgroundSection = ({
   useEffect(() => {
     // Options for IntersectionObserver
     const option = {
-      root: null,
+      root: document.querySelector("#root"),
       rootMargin: "0px",
       threshold: [0.49, 0.5, 0.51, 0.89, 0.9, 0.91],
     };
