@@ -69,14 +69,14 @@ export const data = {
       },
       details: [
         {
-          id: 20,
-          name: "litres de capacité de chargement",
-          value: "2100 +",
+          id: 22,
+          name: "Autonomie (WLTP)",
+          value: "533 km",
         },
         {
           id: 21,
-          name: "Autonomie (WLTP)",
-          value: "533 km",
+          name: "Capacité de chargement",
+          value: "2100 +",
         },
         {
           id: 22,
