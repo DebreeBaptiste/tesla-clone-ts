@@ -9,6 +9,7 @@ export const data = {
       className: "discover-tesla",
       buttonDarkText: undefined,
       buttonLightText: undefined,
+      buttonTransparent: "Essais",
       images: {
         homeBackgroundDesktop: "/media/Homepage-Test_Drive.mp4",
         homeBackgroundMobile: "/media/Homepage-Test_Drive-Mobile.mp4",

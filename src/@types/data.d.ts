@@ -11,6 +11,7 @@ export interface HomeProps {
             name: string;
             buttonDarkText: string;
             buttonLightText: string;
+            buttonTransparent?: string;
             technicalDescription: {
                 title: string;
                 description: string;
