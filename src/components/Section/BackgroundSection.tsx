@@ -1,7 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+/* tools */
+import { useContext, useEffect, useRef, useState } from "react";
+import { MobileContext } from "../../Hooks/mobileContext";
 
+/* types */
 import { ModelProps } from "../../@types/model";
 
+/* styles */
 import "./styles.scss";
 
 interface BackgroundSectionProps {
@@ -16,15 +20,16 @@ export const BackgroundSection = ({
   setOpacity,
 }: BackgroundSectionProps) => {
   // check if device is mobile
-  const [isMobile, setIsMobile] = useState(false);
+
+  const { mobileDevice, changeMobileDevice } = useContext(MobileContext);
 
   // Check if device is mobile on resize window
   useEffect(() => {
     // Set isMobile state on component mount
-    if (window.innerWidth <= 600) setIsMobile(true);
+    if (window.innerWidth <= 600) changeMobileDevice(true);
     // Update isMobile state on window resize
     function handleResize() {
-      setIsMobile(window.innerWidth <= 600); // 600px is the breakpoint for mobile
+      changeMobileDevice(window.innerWidth <= 600); // 600px is the breakpoint for mobile
     }
 
     // Attach the event listener
@@ -54,13 +59,13 @@ export const BackgroundSection = ({
         if (
           entry.intersectionRatio < 0.9 &&
           entry.isIntersecting &&
-          !isMobile
+          !mobileDevice
         ) {
           setOpacity(0);
         } else if (
           entry.intersectionRatio < 0.6 &&
           entry.isIntersecting &&
-          isMobile
+          mobileDevice
         ) {
           setOpacity(0);
         } else if (entry.intersectionRatio > 0.5 && entry.isIntersecting) {
@@ -100,7 +105,7 @@ export const BackgroundSection = ({
           >
             <source
               src={
-                isMobile
+                mobileDevice
                   ? images.homeBackgroundMobile
                   : images.homeBackgroundDesktop
               }
@@ -112,7 +117,7 @@ export const BackgroundSection = ({
         <img
           className="image"
           src={
-            isMobile
+            mobileDevice
               ? images.homeBackgroundMobile
               : images.homeBackgroundDesktop
           }

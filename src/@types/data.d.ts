@@ -28,6 +28,7 @@ export interface HomeProps {
                 homeBackgroundMobile: string;
                 detailBackgroundModel: {
                     mainModel: string;
+                    mainModelMobile: string;
                     techModel: string;
                     orderModel: string;
                 }

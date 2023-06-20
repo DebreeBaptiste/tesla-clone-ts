@@ -26,6 +26,7 @@ export interface ModelProps {
         homeBackgroundMobile: string;
         detailBackgroundModel: {
             mainModel: string;
+            mainModelMobile: string;
             techModel: string;
             orderModel: string;
         }
