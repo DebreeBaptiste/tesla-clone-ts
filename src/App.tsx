@@ -28,7 +28,7 @@ function App() {
               <Route
                 key={item.id}
                 path={item.slug}
-                element={<Model data={item} />}
+                element={<Model model={item} />}
               />
             ))}
             <Route path="*" element={<NotFound />} />

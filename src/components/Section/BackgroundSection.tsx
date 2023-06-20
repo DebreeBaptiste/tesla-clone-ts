@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-import { ItemProps } from "../../@types/item";
+import { ModelProps } from "../../@types/model";
 
 import "./styles.scss";
 
 interface BackgroundSectionProps {
-  data: ItemProps;
+  data: ModelProps;
   setActiveSection: (section: string) => void;
   setOpacity: (opacity: number) => void;
 }

@@ -11,15 +11,25 @@ export interface HomeProps {
             name: string;
             buttonDarkText: string;
             buttonLightText: string;
+            technicalDescription: {
+                title: string;
+                description: string;
+                features: Element[
+                {
+                    id: number;
+                    image: string;
+                    title: string;
+                    description: string;
+                }
+                ],
+            },
             images: {
                 homeBackgroundDesktop: string;
                 homeBackgroundMobile: string;
                 detailBackgroundModel: {
                     mainModel: string;
-                    model1: string;
-                    model2: string;
-                    model3: string;
-                    model4: string;
+                    techModel: string;
+                    orderModel: string;
                 }
             }
             details: [
@@ -43,5 +53,8 @@ export interface HomeProps {
             name: string;
             slug: string;
         };
+        menu: Element[
+        { name: string; slug: string; id: number; }
+        ],
     };
 }

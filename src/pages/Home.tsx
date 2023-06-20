@@ -9,7 +9,7 @@ import { SectionButton } from "../components/Section/SectionButton";
 import { SectionModel } from "../components/Section/SectionModel";
 
 import { HomeProps } from "../@types/data.js";
-import { ItemProps } from "../@types/item.js";
+import { ModelProps } from "../@types/model.js";
 
 export const Home = ({ data }: HomeProps) => {
   const [activeSection, setActiveSection] = useState<string>("discover-tesla");
@@ -44,7 +44,7 @@ export const Home = ({ data }: HomeProps) => {
   return (
     <main className="home">
       <Section>
-        {data.items.map((item: ItemProps) => {
+        {data.items.map((item: ModelProps) => {
           return (
             <BackgroundSection
               data={item}

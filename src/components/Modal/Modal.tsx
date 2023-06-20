@@ -1,14 +1,21 @@
-/* Styles */
-import { useContext } from "react";
-import "./styles.scss";
+import { HomeProps } from "../../@types/data";
+import { useContext, useEffect } from "react";
 import { ModalContext } from "../../Hooks/ModalContext";
+import { Link, useLocation } from "react-router-dom";
 
-interface ModalProps {
-  data: any;
-}
+/* Styles */
+import "./styles.scss";
 
-export const Modal = ({ data }: ModalProps) => {
+export const Modal = ({ data }: HomeProps) => {
   const { modalOpen, modalHandler } = useContext(ModalContext);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (modalOpen) {
+      modalHandler(!modalOpen);
+    }
+  }, [pathname]);
 
   return (
     <>
@@ -33,9 +40,9 @@ export const Modal = ({ data }: ModalProps) => {
               <ul className="modal-list">
                 {data.menu.map((item: any) => (
                   <li className="modal-item" key={item.id}>
-                    <a href={item.slug} className="modal-link">
+                    <Link to={item.slug} className="modal-link">
                       <span>{item.name}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

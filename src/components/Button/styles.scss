@@ -66,9 +66,54 @@
   &-transparent.visible-true {
     opacity: 1;
   }
+
+  &-transparent-black {
+    /* SELF-LAYOUT */
+    width: 200px;
+    /* APPEARANCE */
+    color: var(--color-black);
+    border: 3px solid var(--color-black);
+    border-radius: 6px;
+    background-color: transparent;
+    backdrop-filter: none;
+    /* MISCELLANEAOUS */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* INNER-LAYOUT */
+    padding: var(--size-base) var(--size-2x);
+    /* TEXT */
+
+    &:hover {
+      color: var(--color-white);
+      border: 3px solid var(--color-black);
+      background-color: var(--color-black);
+    }
+  }
+
+  &-transparent-grey {
+    /* SELF-LAYOUT */
+    width: 200px;
+    /* APPEARANCE */
+    color: var(--color-grey-20);
+    border-radius: 6px;
+    background-color: var(--button--background-light);
+    backdrop-filter: none;
+    /* MISCELLANEAOUS */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* INNER-LAYOUT */
+    padding: var(--size-base) var(--size-2x);
+    /* TEXT */
+
+    &:hover {
+      background-color: var(--button--background-medium);
+    }
+  }
 }
 @media (max-width: 600px) {
-  .button {
+  .button,
+  .button-transparent-black,
+  .button-transparent-grey {
     /* SELF-LAYOUT */
     width: 100%;
     /* APPEARANCE */
