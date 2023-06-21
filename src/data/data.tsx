@@ -60,6 +60,7 @@ export const data = {
       images: {
         homeBackgroundDesktop: "/media/modely-desktop.avif",
         homeBackgroundMobile: "/media/modely-mobile.avif",
+        testdriveModel: "/media/testdrive-y.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-model-y.avif",
           mainModelMobile: "/media/tesla-model-y-mobile.webp",
@@ -126,6 +127,7 @@ export const data = {
       images: {
         homeBackgroundDesktop: "/media/model3-desktop.avif",
         homeBackgroundMobile: "/media/model3-mobile.avif",
+        testdriveModel: "/media/testdrive-3.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-model-3.webp",
           mainModelMobile: "/media/tesla-model-3-mobile.webp",
@@ -192,6 +194,7 @@ export const data = {
       images: {
         homeBackgroundDesktop: "/media/models-desktop.avif",
         homeBackgroundMobile: "/media/models-mobile.avif",
+        testdriveModel: "/media/testdrive-s.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-model-s.avif",
           mainModelMobile: "/media/tesla-model-s-mobile.webp",
@@ -263,6 +266,7 @@ export const data = {
       images: {
         homeBackgroundDesktop: "/media/modelx-desktop.avif",
         homeBackgroundMobile: "/media/modelx-mobile.avif",
+        testdriveModel: "/media/testdrive-x.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-model-x.avif",
           mainModelMobile: "/media/tesla-model-x-mobile.webp",

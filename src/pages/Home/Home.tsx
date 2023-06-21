@@ -8,6 +8,7 @@ import { Section } from "../../components/Section";
 import { SectionButton } from "../../components/Section/SectionButton";
 import { SectionModel } from "../../components/Section/SectionModel";
 
+/* types */
 import { HomeProps } from "../../@types/data.js";
 import { ModelProps } from "../../@types/model.js";
 

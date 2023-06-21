@@ -1,5 +1,7 @@
-/* Components */
+/* tools */
 import { useState } from "react";
+
+/* Components */
 import { Footer } from "../../components/Footer/Footer";
 
 /* styles */

@@ -12,6 +12,7 @@ import { Modal } from "./components/Modal/Modal";
 import { Home } from "./pages/Home/Home";
 import { ModelDetails } from "./pages/ModelDetails/ModelDetails";
 import { Exchange } from "./pages/Exchange/Exchange";
+import { Testdrive } from "./pages/Testdrive/Testdrive";
 import { NotFound } from "./pages/NotFound/NotFound";
 
 /* data */
@@ -34,6 +35,7 @@ function App() {
                 />
               ))}
               <Route path="/exchange" element={<Exchange />} />
+              <Route path="/testdrive" element={<Testdrive data={data} />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Modal data={data} />
