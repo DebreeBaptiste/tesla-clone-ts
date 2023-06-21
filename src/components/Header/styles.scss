@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
-  width: calc(100% - var(--size-8x));
+  width: calc(100% - var(--size-6x));
   height: var(--header-height);
   /* APPEARANCE */
   background-color: transparent;
@@ -15,7 +15,7 @@
 
   /* INNER-LAYOUT */
   align-items: center;
-  padding: 0 var(--size-4x);
+  padding: 0 var(--size-3x);
   /* TEXT */
 }
 .header.not-fixed {

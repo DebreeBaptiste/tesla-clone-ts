@@ -1,15 +1,15 @@
 /* tools */
 import { useContext, useEffect, useMemo, useState } from "react";
-import { ColorContext } from "../Hooks/ColorContext";
+import { ColorContext } from "../../Hooks/ColorContext";
 
 /* components */
-import { BackgroundSection } from "../components/Section/BackgroundSection";
-import { Section } from "../components/Section";
-import { SectionButton } from "../components/Section/SectionButton";
-import { SectionModel } from "../components/Section/SectionModel";
+import { BackgroundSection } from "../../components/Section/BackgroundSection";
+import { Section } from "../../components/Section";
+import { SectionButton } from "../../components/Section/SectionButton";
+import { SectionModel } from "../../components/Section/SectionModel";
 
-import { HomeProps } from "../@types/data.js";
-import { ModelProps } from "../@types/model.js";
+import { HomeProps } from "../../@types/data.js";
+import { ModelProps } from "../../@types/model.js";
 
 export const Home = ({ data }: HomeProps) => {
   const [activeSection, setActiveSection] = useState<string>("discover-tesla");

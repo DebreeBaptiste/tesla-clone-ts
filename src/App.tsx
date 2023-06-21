@@ -6,16 +6,16 @@ import { MobileProvider } from "./Hooks/mobileContext";
 
 /* components */
 import { Header } from "./components/Header";
-import { Home } from "./pages/Home";
-import { ModelDetails } from "./pages/ModelDetails";
-import { NotFound } from "./pages/NotFound";
 import { Modal } from "./components/Modal/Modal";
+
+/* pages */
+import { Home } from "./pages/Home/Home";
+import { ModelDetails } from "./pages/ModelDetails/ModelDetails";
+import { Exchange } from "./pages/Exchange/Exchange";
+import { NotFound } from "./pages/NotFound/NotFound";
 
 /* data */
 import { data } from "./data/data";
-
-/*  style */
-import "./App.scss";
 
 function App() {
   return (
@@ -33,6 +33,7 @@ function App() {
                   element={<ModelDetails model={item} />}
                 />
               ))}
+              <Route path="/exchange" element={<Exchange />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Modal data={data} />
