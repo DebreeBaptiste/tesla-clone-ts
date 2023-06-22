@@ -5,7 +5,7 @@ export const data = {
       name: undefined,
       title: "Découvrez Tesla",
       bookTestDrive: "Réserver un essai aujourd'hui",
-      bookTestDriveSlug: "discoverTesla",
+      bookTestDriveSlug: "testdrive",
       className: "discover-tesla",
       buttonDarkText: undefined,
       buttonLightText: undefined,
