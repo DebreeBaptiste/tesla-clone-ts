@@ -39,11 +39,11 @@ export const Modal = ({ data }: HomeProps) => {
             <section className="modal-content">
               <ul className="modal-list">
                 {data.menu.map((item: any) => (
-                  <li className="modal-item" key={item.id}>
-                    <Link to={item.slug} className="modal-link">
+                  <Link to={item.slug} className="modal-link">
+                    <li className="modal-item" key={item.id}>
                       <span>{item.name}</span>
-                    </Link>
-                  </li>
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </section>

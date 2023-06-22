@@ -85,6 +85,18 @@
 }
 .modal-item {
   /* SELF-LAYOUT */
+  margin: 0 var(--size-half);
+  /* APPEARANCE */
+  color: var(--color-grey-20);
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+  padding: var(--size-half) var(--size-base);
+  /* TEXT */
+  font-size: var(--font-size-30);
+}
+.modal-link {
+  /* SELF-LAYOUT */
   -webkit-margin-after: var(--size-base);
   margin-block-end: var(--size-base);
   /* APPEARANCE */
@@ -95,22 +107,9 @@
   /* INNER-LAYOUT */
   line-height: var(--size-4x);
   /* TEXT */
-
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
-}
-.modal-link {
-  /* SELF-LAYOUT */
-  margin: 0 var(--size-half);
-  /* APPEARANCE */
-  color: var(--color-grey-20);
-  /* MISCELLANEAOUS */
-
-  /* INNER-LAYOUT */
-  padding: var(--size-half) var(--size-base);
-  /* TEXT */
-  font-size: var(--font-size-30);
 }
 
 /* --- MODAL BACKDROP --- */
