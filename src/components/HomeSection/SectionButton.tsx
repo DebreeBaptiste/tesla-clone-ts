@@ -1,4 +1,10 @@
+/* tools */
+import { Link } from "react-router-dom";
+
+/* Components */
 import { Button } from "../Button";
+
+/* styles */
 import "./styles.scss";
 
 interface SectionButtonProps {
@@ -27,9 +33,11 @@ export const SectionButton = ({
         <Button className={`button-light ${name}`}>{buttonLightText}</Button>
       )}
       {buttonTransparent && (
-        <Button className={`button-transparent visible-${timeline}`}>
-          {buttonTransparent}
-        </Button>
+        <Link to="/testdrive">
+          <Button className={`button-transparent visible-${timeline}`}>
+            {buttonTransparent}
+          </Button>
+        </Link>
       )}
     </div>
   );
