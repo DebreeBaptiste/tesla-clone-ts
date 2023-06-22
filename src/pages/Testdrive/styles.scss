@@ -1,1 +1,19 @@
 /* testdrive */
+
+.testdrive {
+  /* SELF-LAYOUT */
+  margin: 150px auto 50px auto;
+  max-width: 800px;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+  padding-inline: var(--size-2x);
+  /* TEXT */
+}
+@media (max-width: 600px) {
+  .testdrive {
+    margin: 120px auto 50px auto;
+  }
+}

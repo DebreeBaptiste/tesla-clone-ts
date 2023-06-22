@@ -3,10 +3,10 @@ import { useContext, useEffect, useMemo, useState } from "react";
 import { ColorContext } from "../../Hooks/ColorContext";
 
 /* components */
-import { BackgroundSection } from "../../components/Section/BackgroundSection";
-import { Section } from "../../components/Section";
-import { SectionButton } from "../../components/Section/SectionButton";
-import { SectionModel } from "../../components/Section/SectionModel";
+import { BackgroundSection } from "../../components/HomeSection/BackgroundSection";
+import { Section } from "../../components/HomeSection";
+import { SectionButton } from "../../components/HomeSection/SectionButton";
+import { SectionModel } from "../../components/HomeSection/SectionModel";
 
 /* types */
 import { HomeProps } from "../../@types/data.js";

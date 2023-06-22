@@ -1,16 +1,31 @@
 /* tools */
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 /* Components */
 import { Footer } from "../../components/Footer/Footer";
 
 /* styles */
 import "./styles.scss";
+import { ColorContext } from "../../Hooks/ColorContext";
 
 export const Exchange: React.FC = () => {
+  const { changeColor } = useContext(ColorContext);
+
   const [openTooltip, setOpenTooltip] = useState(false);
   const [keepTooltipOpen, setKeepTooltipOpen] = useState(false);
 
+  // Change color of the header when the page is loaded
+  useEffect(() => {
+    changeColor("black");
+  }, []);
+
+  /**
+   *  Handle the tooltip event
+   * @param event
+   * @returns void
+   * @description If the event is a click, check if the target is the tooltip button or not.
+   * If it's not, close the tooltip. If it is, open the tooltip and keep it open.
+   */
   const handleTooltipMouseEvent = (event: any) => {
     if (event.type === "click") {
       if (event.target.className !== "exchange-form-button-tooltip") {

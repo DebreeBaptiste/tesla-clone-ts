@@ -1,5 +1,5 @@
 /* tools */
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { MobileContext } from "../../Hooks/mobileContext";
 
 /* types */

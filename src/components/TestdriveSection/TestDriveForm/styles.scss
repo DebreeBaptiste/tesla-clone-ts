@@ -1,0 +1,178 @@
+/* TESTDRIVE FORM */
+
+.testdrive-form-title {
+  /* SELF-LAYOUT */
+  margin: var(--size-8x) 0;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-size: var(--font-size-60);
+  font-weight: var(--font-weight--medium);
+}
+@media (max-width: 600px) {
+  .testdrive-form-title {
+    font-size: var(--font-size-55);
+  }
+}
+
+/* Form */
+
+.testdrive-form-input-container {
+  /* SELF-LAYOUT */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--size-3x);
+  row-gap: var(--size-3x);
+  margin: var(--size-3x) 0;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+}
+@media (max-width: 600px) {
+  .testdrive-form-input-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testdrive-form-label {
+  /* SELF-LAYOUT */
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--size-1_5x);
+  width: 100%;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+}
+.testdrive-form-checkbox-label {
+  /* SELF-LAYOUT */
+  display: flex;
+  align-items: center;
+  column-gap: var(--size-base);
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+}
+
+.testdrive-form-label-text {
+  /* SELF-LAYOUT */
+
+  /* APPEARANCE */
+  color: var(--color-grey-30);
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-size: var(--font-size-30);
+  font-weight: var(--font-weight--medium);
+}
+
+.testdrive-form-checkbox-label-text {
+  /* SELF-LAYOUT */
+  margin: var(--size-2x) 0;
+  /* APPEARANCE */
+  color: var(--color-grey-10);
+  text-decoration: underline;
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-size: var(--font-size-30);
+  font-weight: var(--font-weight--medium);
+}
+
+.testdrive-form-input {
+  /* SELF-LAYOUT */
+  min-block-size: var(--size-5x);
+  /* APPEARANCE */
+  color: var(--color-grey-25);
+  border: none;
+  border-radius: var(--size-half);
+  background-color: var(--color-grey-70);
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+  padding-inline: var(--size-2x);
+  /* TEXT */
+  font-size: var(--font-size-55);
+  font-weight: var(--font-weight--light);
+}
+
+.testdrive-form-checkbox-input {
+  /* SELF-LAYOUT */
+
+  /* APPEARANCE */
+  appearance: default;
+  border: 1px solid var(--color-grey-35);
+  background-color: transparent;
+  /* MISCELLANEAOUS */
+  cursor: pointer;
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+}
+
+.testdrive-form-disclamer-text {
+  /* SELF-LAYOUT */
+  margin: var(--size-3x) 0;
+  max-width: 660px;
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-size: var(--font-size-25);
+  font-weight: var(--font-weight--light);
+  line-height: var(--font-size-50);
+}
+
+.testdrive-form-submit-button {
+  /* SELF-LAYOUT */
+  width: auto;
+  max-width: 316px;
+  min-block-size: var(--size-5x);
+  /* APPEARANCE */
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--size-half);
+  background-color: var(--color-blue-30);
+  /* MISCELLANEAOUS */
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+  font-size: var(--font-size-30);
+  font-weight: var(--font-weight--ligth);
+  font-family: var(--font-family--base);
+
+  &:hover {
+    background-color: var(--color-blue-20);
+  }
+}
+@media (max-width: 600px) {
+  .testdrive-form-submit-button {
+    max-width: 100%;
+  }
+}
