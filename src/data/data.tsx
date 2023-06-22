@@ -317,7 +317,7 @@ export const data = {
         homeBackgroundMobile: "/media/powerwall-mobile.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-powerwall.avif",
-          mainModelMobile: "/media/tesla-model-x-mobile.webp",
+          mainModelMobile: "/media/tesla-powerwall.avif",
           energyImage: "/media/powerwall-storm.webp",
           techModel: "",
         },
@@ -360,7 +360,7 @@ export const data = {
         homeBackgroundMobile: "/media/charger.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-recharge.avif",
-          mainModelMobile: "/media/tesla-model-x-mobile.webp",
+          mainModelMobile: "/media/tesla-recharge.avif",
           energyImage: "/media/homecharging.webp",
           techModel: "",
         },
