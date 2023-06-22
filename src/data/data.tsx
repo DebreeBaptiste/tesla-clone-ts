@@ -307,11 +307,18 @@ export const data = {
       className: "powerwall",
       buttonDarkText: "En savoir plus",
       buttonLightText: undefined,
+      technicalDescription: {
+        title: "Protection de secours",
+        description:
+          "Le Powerwall est une batterie qui stocke l'énergie, détecte les pannes de courant et devient automatiquement la source d'énergie de votre foyer lorsque le réseau est en panne. Contrairement aux générateurs, le Powerwall continue d'éclairer votre foyer et de recharger vos téléphones sans entretien, sans carburant et sans bruit. Associez-le à des panneaux solaires et rechargez-le avec la lumière du soleil pour pouvoir utiliser vos appareils pendant plusieurs jours.",
+      },
       images: {
         homeBackgroundDesktop: "/media/powerwall.avif",
         homeBackgroundMobile: "/media/powerwall-mobile.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-powerwall.avif",
+          mainModelMobile: "/media/tesla-model-x-mobile.webp",
+          energyImage: "/media/powerwall-storm.webp",
           techModel: "",
         },
       },
@@ -319,17 +326,17 @@ export const data = {
         {
           id: 34,
           name: "Stockez l'énergie",
-          value: "logo",
+          value: "/media/store-energy.svg",
         },
         {
           id: 35,
           name: "Protection de secours",
-          value: "logo",
+          value: "24/7",
         },
         {
           id: 36,
           name: "Alimentez votre foyer",
-          value: "logo",
+          value: "/media/home.svg",
         },
       ],
     },
@@ -343,11 +350,18 @@ export const data = {
       className: "recharge",
       buttonDarkText: "Commander maintenant",
       buttonLightText: undefined,
+      technicalDescription: {
+        title: "Recharge à domicile",
+        description:
+          "Bénéficiez d'une recharge complète avec le Wall Connector Tesla sans avoir à quitter votre domicile. Facile à installer dans différents types de foyers et conçu pour une utilisation à l'intérieur et à l'extérieur, le Wall Connector garantit une recharge rapide et pratique pour chaque propriétaire et locataire, à tout moment de la journée.",
+      },
       images: {
         homeBackgroundDesktop: "/media/charger.avif",
         homeBackgroundMobile: "/media/charger.avif",
         detailBackgroundModel: {
           mainModel: "/media/tesla-recharge.avif",
+          mainModelMobile: "/media/tesla-model-x-mobile.webp",
+          energyImage: "/media/homecharging.webp",
           techModel: "",
         },
       },
@@ -355,16 +369,16 @@ export const data = {
         {
           id: 37,
           name: "Rechargez à domicile",
-          value: "logo",
+          value: "/media/recharge.svg",
         },
         {
           id: 38,
-          name: "Superchargeurs mondiaux",
+          name: "Superchargeurs",
           value: "45 000 +",
         },
         {
           id: 39,
-          name: "Wall Connectors sur les sites Recharge à destination",
+          name: "Wall Connectors",
           value: "40 000 +",
         },
       ],
@@ -372,15 +386,15 @@ export const data = {
   ],
   assistance: {
     name: "Assistance",
-    slug: "assistance",
+    slug: "#",
   },
   shop: {
     name: "Shop",
-    slug: "shop",
+    slug: "#",
   },
   account: {
     name: "Compte",
-    slug: "compte",
+    slug: "#",
   },
   menu: [
     { name: "Model S", slug: "models", id: 81 },
@@ -393,7 +407,7 @@ export const data = {
     { name: "Essais", slug: "testdrive", id: 88 },
     { name: "Véhicules de société", slug: "#", id: 89 },
     { name: "Powerwall", slug: "powerwall", id: 90 },
-    { name: "Énergie", slug: "energy", id: 91 },
+    { name: "Énergie", slug: "#", id: 91 },
     {
       name: "Électricité pour les professionnels",
       slug: "#",
@@ -404,7 +418,7 @@ export const data = {
     { name: "Carrières", slug: "#", id: 95 },
     { name: "Nous trouver", slug: "#", id: 96 },
     { name: "Événements", slug: "#", id: 97 },
-    { name: "Assistance", slug: "assistance", id: 98 },
+    { name: "Assistance", slug: "#", id: 98 },
     { name: "Relations investisseurs", slug: "#", id: 99 },
     { name: "Shop", slug: "#", id: 100 },
     { name: "Compte", slug: "#", id: 101 },

@@ -41,6 +41,10 @@ export const Model: React.FC<{ model: ModelProps }> = ({ model }) => {
     }
   }, [pathname]);
 
+  model.details.map((detail: any) => {
+    console.log(detail.value.slice(-4));
+  });
+
   return (
     <div
       className="model-container"
@@ -75,9 +79,17 @@ export const Model: React.FC<{ model: ModelProps }> = ({ model }) => {
         <div className="model-content-technical-container">
           {model.details.map((detail: any) => (
             <div key={detail.id} className="model-content-technical">
-              <span className="model-content-technical-value">
-                {detail.value}
-              </span>
+              {detail.value.slice(-4) === ".svg" ? (
+                <img
+                  className="model-content-technical-icon-value"
+                  src={detail.value}
+                />
+              ) : (
+                <span className="model-content-technical-value">
+                  {detail.value}
+                </span>
+              )}
+
               <span className="model-content-technical-name">
                 {detail.name}
               </span>

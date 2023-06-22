@@ -32,7 +32,7 @@ export const SectionModel = ({
       }`}
       style={{ opacity: `${opacity}` }}
     >
-      <h2 className={`section-title ${slug} visible-${timeline}`}>{name}</h2>
+      <h2 className={`section-title visible-${timeline}`}>{name}</h2>
 
       {bookTestDrive && (
         <Link

@@ -12,7 +12,7 @@ export interface ModelProps {
     technicalDescription: {
         title: string;
         description: string;
-        features: Element[
+        features?: Element[
         {
             id: number;
             image: string;
@@ -27,6 +27,7 @@ export interface ModelProps {
         detailBackgroundModel: {
             mainModel: string;
             mainModelMobile: string;
+            energyImage?: string;
             techModel: string;
             orderModel: string;
         }

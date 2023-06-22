@@ -1,5 +1,5 @@
 /* types */
-import { ModelProps } from "../../@types/model";
+import { ModelProps } from "../../../@types/model";
 
 /* style */
 import "./styles.scss";

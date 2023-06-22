@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   /* TEXT */
+  font-family: var(--font-family--base);
 }
 
 .text-404 {
@@ -25,8 +26,12 @@
   /* INNER-LAYOUT */
 
   /* TEXT */
-  font-family: var(--font-family--base);
   font-size: var(--size-12x);
+}
+@media (max-width: 600px) {
+  .text-404 {
+    font-size: var(--size-6x);
+  }
 }
 
 .text-not-found {
@@ -39,6 +44,11 @@
   /* INNER-LAYOUT */
 
   /* TEXT */
-  font-family: var(--font-family--base);
+
   font-size: var(--size-8x);
+}
+@media (max-width: 600px) {
+  .text-not-found {
+    font-size: var(--size-4x);
+  }
 }

@@ -1,6 +1,6 @@
 /* types */
-import { FeatureProps } from "../../@types/feature";
-import { ModelProps } from "../../@types/model";
+import { FeatureProps } from "../../../@types/feature";
+import { ModelProps } from "../../../@types/model";
 
 /* styles */
 import "./styles.scss";

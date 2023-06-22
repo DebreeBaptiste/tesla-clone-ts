@@ -255,6 +255,24 @@
   }
 }
 
+.model-content-technical-icon-value {
+  /* SELF-LAYOUT */
+  height: var(--font-size-60);
+
+  /* APPEARANCE */
+
+  /* MISCELLANEAOUS */
+
+  /* INNER-LAYOUT */
+
+  /* TEXT */
+}
+@media (max-width: 600px) {
+  .model-content-technical-icon-value {
+    height: var(--font-size-45);
+  }
+}
+
 .model-content-technical-name {
   /* SELF-LAYOUT */
   text-align: center;
